@@ -1,0 +1,287 @@
+:root {
+    --darkc: #404040;
+    --lightc: #2E98C0;
+    --white: #ffffff;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body,
+div,
+form,
+input,
+select,
+p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+.darkbg {
+    color: var(--white);
+    background-color: var(--darkc);
+}
+
+.lightbg {
+    color: var(--darkc);
+    background-color: var(--lightc);
+}
+.whitelightgradientbg{
+    background-image: linear-gradient(#2E98C0 0%,#fff 30%);
+}
+
+.header {
+    width: 100%;
+    background-color: var(--lightc);
+    filter: drop-shadow(0 0 2rem #2E98C0);
+    position: fixed;
+    transform: translateY(-300px);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.logo {
+    position: relative;
+    width: 180px;
+    left: 5%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.fullcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maincontainer {
+    width: 80%;
+    text-align: center;
+    color: var(--white);
+}
+
+.formcontainer {
+    width: 70%;
+    text-align: center;
+    color: var(--white);
+}
+
+.herosection {
+    height: 70vh;
+    position: relative;
+}
+
+.heroLogo{
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+.heroLogo img{
+    width: 100%;
+}
+
+.section-1 {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.section-1-heading {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--lightc);
+}
+
+.textcontent p{
+    color: var(--white);
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+.contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    text-align: start;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 3px;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    outline: none;
+    border: 1px solid #095484;
+}
+
+input {
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 7px 0;
+    background: transparent;
+}
+
+textarea {
+    width: calc(100% - 6px);
+}
+
+.item {
+    position: relative;
+    margin: 10px 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.item i,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    font-size: 20px;
+    color: #a9a9a9;
+}
+
+.item i {
+    right: 2%;
+    top: 30px;
+    z-index: 1;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    right: 1%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.subitem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smitem {
+    width: 60%;
+}
+
+.smitem input {
+    width: calc(100% - 20px);
+    padding: 5px;
+}
+
+.lgitem {
+    width: 100%;
+}
+
+.lgitem input {
+    width: calc(100% - 20px);
+    padding: 5px;
+}
+
+.lgitem textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+}
+
+.lgitem select {
+    width: calc(100% - 8px);
+    padding: 5px;
+}
+
+.btn-block {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: var(--lightc);
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0666a3;
+}
+
+@media screen and (max-height:400px) {
+    .herosection {
+        height: 400px;
+        position: relative;
+    }
+}
+@media screen and (max-width: 750px) {
+    .section-1-heading {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+        color: var(--lightc);
+    }
+    
+    .textcontent p{
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .subitem {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .smitem {
+        width: 100%;
+    }
+}
